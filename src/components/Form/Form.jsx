@@ -32,7 +32,7 @@ const Form = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    onSubmit = { name: name, number: number };
+    onSubmit({ name: name, number: number });
     reset();
   };
 
