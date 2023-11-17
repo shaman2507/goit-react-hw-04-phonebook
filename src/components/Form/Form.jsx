@@ -10,7 +10,6 @@ const Form = ({ onSubmit }) => {
   const numberId = nanoid();
 
   const handleChange = e => {
-    console.log(e);
     const { name, value } = e.currentTarget;
     switch (name) {
       case 'name':
