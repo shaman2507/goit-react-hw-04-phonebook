@@ -24,11 +24,6 @@ const Form = ({ onSubmit }) => {
     }
   };
 
-  // handleNumberChange = e => {
-  //   console.log(e);
-  //   this.setState({ number: e.currentTarget.value });
-  // };
-
   const handleSubmit = e => {
     e.preventDefault();
 

@@ -16,15 +16,13 @@ const App = () => {
       localStorage.setItem('contacts', JSON.stringify(contacts));
     }
   }, [contacts]);
-  // componentDidMount() {
-  //   const LocalData = localStorage.getItem('contacts');
-  //   if (LocalData) this.setState({ contacts: JSON.parse(LocalData) });
-  // }
 
-  // componentDidUpdate(prevProps, PrevState) {
-  //   if (PrevState.contacts !== this.state.contacts)
-  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-  // }
+  useEffect(() => {
+    const LocalData = localStorage.getItem(contacts);
+    if (LocalData !== null) {
+      return JSON.parse(LocalData);
+    } 
+  }, [contacts])
 
   const addContact = contact => {
     const prevContacts = contacts.some(
